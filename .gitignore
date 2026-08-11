@@ -1,3 +1,14 @@
 /public/
 /resources/_gen/
 .hugo_build.lock
+
+# Obsidian: local UI/session state, not real config — changes on every
+# open/resize and would show up as noise in Source Control for no reason
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Obsidian: vault-local trash for deleted notes
+.trash/
+
+# macOS Finder metadata
+.DS_Store
