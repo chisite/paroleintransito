@@ -1,0 +1,7 @@
+{{- $dest := .Destination -}}
+{{- if or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") (strings.HasPrefix $dest "//") (strings.HasPrefix $dest "/") -}}
+<img src="{{ $dest | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" />
+{{- else -}}
+{{- $filename := path.Base $dest -}}
+<img src="/{{ .Page.Section }}/{{ $filename }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" />
+{{- end -}}

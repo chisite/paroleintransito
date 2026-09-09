@@ -16,6 +16,10 @@
     {
       "folder": "content/teatro",
       "template": "templates/nuovo-testo.md"
+    },
+    {
+      "folder": "content/poesie",
+      "template": "templates/nuovo-testo.md"
     }
   ],
   "file_templates": [],

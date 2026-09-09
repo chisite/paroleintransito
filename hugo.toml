@@ -22,6 +22,14 @@ buildExpired = false
   env = "production"
   description = "Racconti e testi teatrali"
   defaultTheme = "auto"
+
+  [params.profileMode]
+    enabled = true
+    imageUrl = "images/chiara-background.jpeg"
+    imageTitle = "Chiara"
+    imageWidth = 500
+    imageHeight = 500
+
   ShowReadingTime = true
   ShowWordCount = true
   ShowShareButtons = false
@@ -33,18 +41,6 @@ buildExpired = false
   TocOpen = false
   UseHugoToc = true
   comments = false
-
-[[menu.main]]
-  identifier = "racconti"
-  name = "Racconti"
-  url = "/racconti/"
-  weight = 10
-
-[[menu.main]]
-  identifier = "teatro"
-  name = "Teatro"
-  url = "/teatro/"
-  weight = 20
 
 [markup]
   [markup.goldmark]

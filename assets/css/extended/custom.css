@@ -1,0 +1,226 @@
+/* Homepage banner styled to match a reference layout: circular photo beside
+   title/subtitle, light rounded font, pill-shaped outline buttons. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.entry-readmore {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.entry-readmore:hover {
+    text-decoration: underline;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--secondary);
+}
+
+.back-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.header {
+    background: #000;
+    color: #fff;
+}
+
+.header-nav a,
+.header-nav .logo a {
+    color: #fff;
+}
+
+/* PaperMod caps .main at --main-width (720px) everywhere; widen it just for
+   the homepage so the banner can use the extra space on large screens. */
+.main:has(> .profile) {
+    max-width: min(1000px, 92vw);
+}
+
+.profile .profile_inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: clamp(2rem, 4vw, 4rem);
+    row-gap: 0.4rem;
+    align-items: center;
+    text-align: left;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profile img {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    width: clamp(260px, 24vw, 420px);
+    height: clamp(260px, 24vw, 420px);
+    object-fit: cover;
+}
+
+.profile h1 {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: 300;
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.profile span {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: clamp(1.1rem, 1.2vw, 1.3rem);
+    line-height: 1.6;
+    color: var(--secondary);
+    max-width: 45ch;
+}
+
+.profile .social-icons {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.buttons {
+    grid-column: 2;
+    grid-row: 4;
+    justify-content: flex-start;
+    margin-top: 1rem;
+    max-width: none;
+    flex-wrap: nowrap;
+}
+
+.button {
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    padding: 0.4rem 1.2rem;
+}
+
+.button-inner {
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.profile .button-inner {
+    color: white;
+}
+
+/* Full-bleed alternating image/text sections below the homepage banner */
+.spotlights {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 4rem;
+}
+
+.spotlight-item {
+    display: flex;
+    align-items: stretch;
+    min-height: 280px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 2rem;
+}
+
+.spotlight-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.spotlight-image {
+    flex: 1 1 33.333%;
+}
+
+.spotlight-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.spotlight-content {
+    flex: 1 1 66.666%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 2rem 6vw;
+}
+
+.spotlight-content h2 {
+    font-weight: 300;
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0;
+}
+
+.spotlight-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--secondary);
+    max-width: 50ch;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .spotlight-item,
+    .spotlight-item.reverse {
+        flex-direction: column;
+        min-height: 0;
+    }
+    .spotlight-image {
+        height: 320px;
+    }
+    .spotlight-content {
+        padding: 2.5rem 6vw;
+        align-items: center;
+        text-align: center;
+    }
+    .spotlight-content p {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile .profile_inner {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    .profile img,
+    .profile h1,
+    .profile span,
+    .profile .social-icons,
+    .buttons {
+        grid-column: 1;
+    }
+    .profile img { grid-row: 1; }
+    .profile h1 { grid-row: 2; }
+    .profile span { grid-row: 3; }
+    .profile .social-icons { grid-row: 4; }
+    .buttons {
+        grid-row: 5;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

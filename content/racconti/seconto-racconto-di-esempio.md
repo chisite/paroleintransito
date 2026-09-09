@@ -1,8 +1,8 @@
 ---
-title: Racconto di esempio
-date: 2026-08-23
+title: Secondo Racconto di esempio
+date: 2026-08-11
 draft: true
-slug: racconto-di-esempio
+slug: seconto-racconto-di-esempio
 description: Una breve descrizione mostrata nell'elenco dei racconti.
 tags:
   - esempio

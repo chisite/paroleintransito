@@ -1,0 +1,26 @@
+{{- with .Params.spotlights }}
+<div class="spotlights">
+  {{- range $i, $s := . }}
+  {{- $slug := strings.Trim $s.url "/" }}
+  <div id="{{ $slug }}" class="spotlight-item {{ if eq (mod $i 2) 1 }}reverse{{ end }}">
+    <div class="spotlight-image">
+      {{- with resources.Get $s.image }}
+      {{- $resized := .Resize "1400x" }}
+      <img src="{{ $resized.Permalink }}" alt="{{ $s.title }}" loading="lazy" />
+      {{- end }}
+    </div>
+    <div class="spotlight-content">
+      <h2>{{ $s.title }}</h2>
+      {{- with $s.description }}
+      <p>{{ . }}</p>
+      {{- end }}
+      {{- if $s.url }}
+      <a class="button" href="{{ $s.url }}">
+        <span class="button-inner">{{ $s.buttonLabel | default "Scopri di più" }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
