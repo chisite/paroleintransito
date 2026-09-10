@@ -10,6 +10,72 @@ html {
     scroll-behavior: smooth;
 }
 
+.callout {
+    --callout-color: #448aff;
+    border-left: 4px solid var(--callout-color);
+    background: color-mix(in srgb, var(--callout-color) 10%, transparent);
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin: 1.5rem 0;
+}
+
+.callout-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+    color: var(--callout-color);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.callout-icon {
+    flex-shrink: 0;
+}
+
+.callout-body p {
+    margin: 0;
+    color: var(--primary);
+}
+
+.callout-body p + p {
+    margin-top: 0.6rem;
+}
+
+.callout-tip, .callout-hint, .callout-success, .callout-check, .callout-done {
+    --callout-color: #08b94e;
+}
+
+.callout-warning, .callout-caution, .callout-attention {
+    --callout-color: #ec7500;
+}
+
+.callout-danger, .callout-error, .callout-bug, .callout-fail, .callout-failure, .callout-missing {
+    --callout-color: #e5383b;
+}
+
+.callout-question, .callout-help, .callout-faq {
+    --callout-color: #d4a72c;
+}
+
+.callout-example {
+    --callout-color: #7853cf;
+}
+
+.callout-quote, .callout-cite {
+    --callout-color: var(--secondary);
+}
+
+.callout-canzone {
+    --callout-color: #d6336c;
+}
+
+.callout-poesia {
+    --callout-color: #0ea5a5;
+}
+
 .entry-readmore {
     position: relative;
     z-index: 2;

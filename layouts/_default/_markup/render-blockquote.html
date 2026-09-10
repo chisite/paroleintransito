@@ -1,0 +1,23 @@
+{{- if eq .Type "alert" -}}
+{{- $type := lower .AlertType -}}
+<div class="callout callout-{{ $type }}">
+  <p class="callout-title">{{ partial "callout-icon.html" $type }}{{ if .AlertTitle }}{{ .AlertTitle }}{{ else }}{{ title $type }}{{ end }}</p>
+  <div class="callout-body">{{ .Text }}</div>
+</div>
+{{- else -}}
+{{- $text := .Text -}}
+{{- $rawType := replaceRE `(?is)^(?:<p>)?\[!([a-z0-9-]+)\].*` "$1" $text -}}
+{{- if ne $rawType $text -}}
+{{- $type := lower $rawType -}}
+{{- $titleRaw := replaceRE `(?is)^(?:<p>)?\[![a-z0-9-]+\]([^\n<]*)\n?.*` "$1" $text -}}
+{{- $title := trim $titleRaw " " -}}
+{{- $body := replaceRE `(?is)^(?:<p>)?\[![a-z0-9-]+\][^\n<]*\n?` "" $text -}}
+{{- $body = replaceRE `(?is)</p>\s*$` "" $body -}}
+<div class="callout callout-{{ $type }}">
+  <p class="callout-title">{{ partial "callout-icon.html" $type }}{{ if $title }}{{ $title | safeHTML }}{{ else }}{{ title $type }}{{ end }}</p>
+  <div class="callout-body"><p>{{ $body | safeHTML }}</p></div>
+</div>
+{{- else -}}
+<blockquote>{{ $text }}</blockquote>
+{{- end -}}
+{{- end -}}

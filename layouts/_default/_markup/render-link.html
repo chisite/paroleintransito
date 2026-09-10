@@ -1,0 +1,10 @@
+{{- $dest := .Destination -}}
+{{- $isSpecial := or (strings.HasPrefix $dest "#") (strings.HasPrefix $dest "mailto:") (strings.HasPrefix $dest "tel:") -}}
+{{- $isAbsolute := or (strings.HasPrefix $dest "http://") (strings.HasPrefix $dest "https://") (strings.HasPrefix $dest "//") (strings.HasPrefix $dest "/") -}}
+{{- $href := $dest -}}
+{{- if and (not $isSpecial) (not $isAbsolute) -}}
+{{- $href = printf "/%s/%s" .Page.Section (path.Base $dest) -}}
+{{- end -}}
+{{- $docExts := slice ".pdf" ".doc" ".docx" ".ppt" ".pptx" ".xls" ".xlsx" ".zip" ".csv" ".txt" ".rtf" -}}
+{{- $isDocument := in $docExts (lower (path.Ext $href)) -}}
+<a href="{{ $href | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $isDocument }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text | safeHTML }}</a>

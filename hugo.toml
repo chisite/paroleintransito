@@ -23,13 +23,6 @@ buildExpired = false
   description = "Racconti e testi teatrali"
   defaultTheme = "auto"
 
-  [params.profileMode]
-    enabled = true
-    imageUrl = "images/chiara-background.jpeg"
-    imageTitle = "Chiara"
-    imageWidth = 500
-    imageHeight = 500
-
   ShowReadingTime = true
   ShowWordCount = true
   ShowShareButtons = false
@@ -41,6 +34,13 @@ buildExpired = false
   TocOpen = false
   UseHugoToc = true
   comments = false
+
+  [params.profileMode]
+    enabled = true
+    imageUrl = "images/chiara-background.jpeg"
+    imageTitle = "Chiara"
+    imageWidth = 500
+    imageHeight = 500
 
 [markup]
   [markup.goldmark]
