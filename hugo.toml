@@ -21,7 +21,8 @@ buildExpired = false
 [params]
   env = "production"
   description = "Racconti e testi teatrali"
-  defaultTheme = "auto"
+  defaultTheme = "light"
+  disableThemeToggle = true
 
   ShowReadingTime = true
   ShowWordCount = true

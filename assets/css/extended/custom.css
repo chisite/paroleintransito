@@ -10,6 +10,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Let the author control preview length herself (via description, or a
+   <!--more--> marker in the text) instead of hard-clamping to 2 lines. */
+.entry-content {
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+}
+
 .callout {
     --callout-color: #448aff;
     border-left: 4px solid var(--callout-color);

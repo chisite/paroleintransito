@@ -98,7 +98,7 @@
     {{- if .Description }}
     <p>{{ .Description | plainify | htmlUnescape }}</p>
     {{- else }}
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    {{ replaceRE `<img[^>]*>` "" .Summary | safeHTML }}
     {{- end }}
   </div>
   <a class="entry-readmore" href="{{ .Permalink }}">Leggi tutto &rarr;</a>

@@ -3,7 +3,7 @@ title: I silenzi del cuore
 date: 2026-09-10
 draft: true
 slug: silenzi-del-cuore
-description: Un musical di Chiara Palumbo
+description:
 tags:
   - romantico
   - musical
@@ -13,8 +13,17 @@ tags:
 
 [Scarica il testo completo in formato PDF](content/teatro/I%20silenzi%20del%20cuore_draft.pdf)
 
-## Personaggi principali
+## Sinossi
 
+Matteo cerca di realizzare il suo sogno (diventare scrittore) e alla fine ci riesce, pubblica un libro.
+
+Lara vuole realizzarsi dal punto di vista personale, è sempre stata legata a qualcuno (prima la famiglia, poi gli uomini con cui è stata) e ora ha bisogno di essere libera, pensare solo a se stessa per crescere come donna e capire cosa vuole fare della sua vita.
+
+Matteo e Lara si incontrano. Lei stimola lui e lo incoraggia a completare il suo manoscritto e a presentarlo a un editore. Lui però non riesce a fare altrettanto con lei e nonostante i due capiscano di essere fatti l'uno per l'altra, Lara questa volta non vuole lasciarsi andare, ha bisogno di ritrovare se stessa e non vuole legarsi a nessuno perché deve prima capire chi è e cosa vuole davvero fare nella vita, ha paura di rimanere un'eterna insoddisfatta.
+
+<!--more-->
+
+## Personaggi principali
 - **MATTEO** — Correttore di bozze che sogna di fare lo scrittore
 - **LARA** — Cameriera al Coffee Mood, reduce da diverse relazioni disastrose, vuole concentrarsi su se stessa e capire cosa vuole fare della sua vita
 - **SANDRA** — Migliore amica di Lara, un po' frivola
@@ -25,13 +34,6 @@ tags:
 - **Clienti bar / praticanti yoga**
 - **Bambina**
 
-## Sinossi
-
-Matteo cerca di realizzare il suo sogno (diventare scrittore) e alla fine ci riesce, pubblica un libro.
-
-Lara vuole realizzarsi dal punto di vista personale, è sempre stata legata a qualcuno (prima la famiglia, poi gli uomini con cui è stata) e ora ha bisogno di essere libera, pensare solo a se stessa per crescere come donna e capire cosa vuole fare della sua vita.
-
-Matteo e Lara si incontrano. Lei stimola lui e lo incoraggia a completare il suo manoscritto e a presentarlo a un editore. Lui però non riesce a fare altrettanto con lei e nonostante i due capiscano di essere fatti l'uno per l'altra, Lara questa volta non vuole lasciarsi andare, ha bisogno di ritrovare se stessa e non vuole legarsi a nessuno perché deve prima capire chi è e cosa vuole davvero fare nella vita, ha paura di rimanere un'eterna insoddisfatta.
 
 ## ATTO 1
 
